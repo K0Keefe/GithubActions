@@ -43,7 +43,7 @@ public class Subtraction
     [TestMethod]
     public void Add_Invalid_Patino()
     {
-        Assert.ThrowsException<FormatException>(() => Program.Subtract"1", "a"));
+        Assert.ThrowsException<FormatException>(() => Program.Subtract("1", "a"));
         Assert.ThrowsException<FormatException>(() => Program.Subtract("a", "1"));
         Assert.ThrowsException<FormatException>(() => Program.Subtract("a", "a"));
     }
@@ -70,7 +70,7 @@ public class Multiplication
     [TestMethod]
     public void Add_Invalid_Patino()
     {
-        Assert.ThrowsException<FormatException>(() => Program.Multiply"1", "a"));
+        Assert.ThrowsException<FormatException>(() => Program.Multiply("1", "a"));
         Assert.ThrowsException<FormatException>(() => Program.Multiply("a", "1"));
         Assert.ThrowsException<FormatException>(() => Program.Multiply("a", "a"));
     }
@@ -116,7 +116,7 @@ public class Power
     [TestMethod]
     public void Add_Valid_Patino()
     {
-        Assert.AreEqual(10, Program.Power("10", "2"));
+        Assert.AreEqual(100, Program.Power("10", "2"));
         Assert.AreEqual(16, Program.Power("4", "2"));
         Assert.AreEqual(8, Program.Power("8", "1"));
     }
