@@ -27,3 +27,113 @@ public class Addition
 		Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null, null));
 	}
 }
+
+
+[TestClass]
+public class Subtraction
+{
+    [TestMethod]
+    public void Add_Valid_Patino()
+    {
+        Assert.AreEqual(8, Program.Subtract("10", "2"));
+        Assert.AreEqual(1, Program.Subtract("3", "2"));
+        Assert.AreEqual(1, Program.Subtract("8", "7"));
+    }
+
+    [TestMethod]
+    public void Add_Invalid_Patino()
+    {
+        Assert.ThrowsException<FormatException>(() => Program.Subtract"1", "a"));
+        Assert.ThrowsException<FormatException>(() => Program.Subtract("a", "1"));
+        Assert.ThrowsException<FormatException>(() => Program.Subtract("a", "a"));
+    }
+
+    [TestMethod]
+    public void Add_Null_Patino()
+    {
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Subtract("1", null));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Subtract(null, "1"));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Subtract(null, null));
+    }
+}
+
+public class Multiplication
+{
+    [TestMethod]
+    public void Add_Valid_Patino()
+    {
+        Assert.AreEqual(20, Program.Multiply("10", "2"));
+        Assert.AreEqual(6, Program.Multiply("3", "2"));
+        Assert.AreEqual(8, Program.Multiply("8", "1"));
+    }
+
+    [TestMethod]
+    public void Add_Invalid_Patino()
+    {
+        Assert.ThrowsException<FormatException>(() => Program.Multiply"1", "a"));
+        Assert.ThrowsException<FormatException>(() => Program.Multiply("a", "1"));
+        Assert.ThrowsException<FormatException>(() => Program.Multiply("a", "a"));
+    }
+
+    [TestMethod]
+    public void Add_Null_Patino()
+    {
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Multiply("1", null));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Multiply(null, "1"));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Multiply(null, null));
+    }
+}
+
+public class Division
+{
+    [TestMethod]
+    public void Add_Valid_Patino()
+    {
+        Assert.AreEqual(5, Program.Divide("10", "2"));
+        Assert.AreEqual(2, Program.Divide("4", "2"));
+        Assert.AreEqual(8, Program.Divide("8", "1"));
+    }
+
+    [TestMethod]
+    public void Add_Invalid_Patino()
+    {
+        Assert.ThrowsException<FormatException>(() => Program.Divide("1", "a"));
+        Assert.ThrowsException<FormatException>(() => Program.Divide("a", "1"));
+        Assert.ThrowsException<FormatException>(() => Program.Divide("a", "a"));
+    }
+
+    [TestMethod]
+    public void Add_Null_Patino()
+    {
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Divide("1", null));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Divide(null, "1"));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Divide(null, null));
+    }
+}
+
+public class Power
+{
+    [TestMethod]
+    public void Add_Valid_Patino()
+    {
+        Assert.AreEqual(10, Program.Power("10", "2"));
+        Assert.AreEqual(16, Program.Power("4", "2"));
+        Assert.AreEqual(8, Program.Power("8", "1"));
+    }
+
+    [TestMethod]
+    public void Add_Invalid_Patino()
+    {
+        Assert.ThrowsException<FormatException>(() => Program.Power("1", "a"));
+        Assert.ThrowsException<FormatException>(() => Program.Power("a", "1"));
+        Assert.ThrowsException<FormatException>(() => Program.Power("a", "a"));
+    }
+
+    [TestMethod]
+    public void Add_Null_Patino()
+    {
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Power("1", null));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Power(null, "1"));
+        Assert.ThrowsException<ArgumentNullException>(() => Program.Power(null, null));
+    }
+}
